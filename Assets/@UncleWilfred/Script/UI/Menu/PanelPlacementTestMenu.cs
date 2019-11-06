@@ -1,18 +1,42 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UniRx;
 
-public class PanelPlacementTestMenu : MonoBehaviour
+namespace UncleWilfred
 {
-    // Start is called before the first frame update
-    void Start()
+    public class PanelPlacementTestMenu : Menu<PanelPlacementTestMenu>
     {
-        
-    }
+        public PanelPlacementTestView view;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public override void Initialize()
+        {
+            view.Init();
+
+            view.btnYes.OnClickAsObservable().TakeUntilDestroy(this).Subscribe(x => {
+                view.OnYesSelected();
+            });
+
+            view.btnNo.OnClickAsObservable().TakeUntilDestroy(this).Subscribe(x => {
+                view.OnNoSelected();
+            });
+        }
+
+        public static void Show()
+        {
+            Open();
+            Instance.view.Open();
+        }
+
+        public static void Hide()
+        {
+            Close();
+            Instance.view.Close();
+        }
+
+        public override void OnBackPressed()
+        {
+            Hide();
+        }
     }
 }

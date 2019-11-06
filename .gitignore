@@ -3,3 +3,4 @@ Library/
 Packages/
 *.csproj
 *.sln
+Temp/

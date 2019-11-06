@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71d685530f92c8f4cafff0f7bf949e35, type: 3}
+  m_Name: QuestionData
+  m_EditorClassIdentifier: 
+  questions:
+  - sprite: {fileID: 21300000, guid: ba40ef33f9af1094c844ed6e114d0293, type: 3}
+    text: Unless
+  - sprite: {fileID: 21300000, guid: 419c1ca5425571b4fb439acd724b1ad0, type: 3}
+    text: Struggle
+  - sprite: {fileID: 21300000, guid: 9ec96adda1c07214f888c4543d64e292, type: 3}
+    text: Lack
+  - sprite: {fileID: 21300000, guid: e1b3fa4cdb05e7141b8bd29894700d60, type: 3}
+    text: Keen
+  - sprite: {fileID: 21300000, guid: 86dfd2374a4be6642aa2661eb8e82614, type: 3}
+    text: Pour
+  - sprite: {fileID: 21300000, guid: 6fc20bc73ff43bb4dbfcd60da050c8c0, type: 3}
+    text: Loose
+  - sprite: {fileID: 21300000, guid: f83dacdcc19a2734e977d716c0d7129a, type: 3}
+    text: Broad
+  - sprite: {fileID: 21300000, guid: 4f8d8e04fe3004e4795db6df43c2ecb8, type: 3}
+    text: Slight
+  - sprite: {fileID: 21300000, guid: bfda6780e2fea524fb36b7aec3c72a71, type: 3}
+    text: Toss
+  - sprite: {fileID: 21300000, guid: 928d79e15adec174a80d424632cb06d1, type: 3}
+    text: Brass
+  - sprite: {fileID: 21300000, guid: 0573c03ad06661148b1a3858d781e4dc, type: 3}
+    text: Mere
+  - sprite: {fileID: 21300000, guid: 29ffdf485ec5fbd4a859e198cafb80c2, type: 3}
+    text: Pledge
+  - sprite: {fileID: 21300000, guid: 7224d502164afd4479d6c7a50d3c3da8, type: 3}
+    text: Stack
+  - sprite: {fileID: 21300000, guid: 806955264ff902a4298c552076503a44, type: 3}
+    text: Fond
+  - sprite: {fileID: 21300000, guid: 8a8e3ac96e09f9e45a0732a617310a0e, type: 3}
+    text: Shove

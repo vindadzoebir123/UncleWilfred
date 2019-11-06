@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 namespace UncleWilfred
 {
     public class PanelConfirmationView : MonoBehaviour
     {
         public Button beginnerBtn, testBtn;
+
+        int index = 0;
 
         public void Init()
         {
@@ -20,7 +23,7 @@ namespace UncleWilfred
             if(!gameObject.activeSelf)
                 gameObject.SetActive(true);
         }
-
+       
         public void Close()
         {
             if(gameObject.activeSelf)

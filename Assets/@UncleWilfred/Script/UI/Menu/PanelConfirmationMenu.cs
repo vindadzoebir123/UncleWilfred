@@ -8,7 +8,7 @@ namespace UncleWilfred
     public class PanelConfirmationMenu : Menu<PanelConfirmationMenu>
     {
         public PanelConfirmationView view;
-        
+
         public override void Initialize()
         {
             view.Init();
@@ -18,6 +18,7 @@ namespace UncleWilfred
             });
 
             view.testBtn.OnClickAsObservable().TakeUntilDestroy(this).Subscribe(x => {
+                PanelPlacementTestMenu.Show();
                 //call setting here
             });
             
