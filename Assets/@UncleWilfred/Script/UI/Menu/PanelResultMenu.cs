@@ -20,6 +20,7 @@ namespace UncleWilfred
 
            view.nextBtn.OnClickAsObservable().TakeUntilDestroy(this).Subscribe(x => {
                //play game here
+               PanelLevel1Menu.Show();
            });
             
         }

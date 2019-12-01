@@ -26,10 +26,10 @@ namespace UncleWilfred
 
             if(level == "Advance")
             {
-                textLevel.text = string.Format("You are <color=#F8CA93>{0}d</color>!", level);
+                textLevel.text = string.Format("You are \n\n<color=#F8CA93>{0}d!</color>", level);
             }
             else
-                textLevel.text = string.Format("You are an <color=#F8CA93>{0}</color>!", level);
+                textLevel.text = string.Format("You are an \n\n<color=#F8CA93>{0}!</color>", level);
         }
        
         public void Close()

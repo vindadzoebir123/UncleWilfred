@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71d685530f92c8f4cafff0f7bf949e35, type: 3}
+  m_Name: Level1Data
+  m_EditorClassIdentifier: 
+  questions:
+  - sprite: {fileID: 21300000, guid: 7370f2eda2dddbf4cbb22eb44b1ec9a8, type: 3}
+    text: Bird
+  - sprite: {fileID: 21300000, guid: e6a7de5da5334e54ca1536b83c403128, type: 3}
+    text: Cat
+  - sprite: {fileID: 21300000, guid: 35a809fede043404ca30321f1be16db0, type: 3}
+    text: Cliff
+  - sprite: {fileID: 21300000, guid: 3a018138981ab7443b2dd7b19b76cfc1, type: 3}
+    text: Dog
+  - sprite: {fileID: 21300000, guid: 3e86c2a701fab0240a64b4c7eec30672, type: 3}
+    text: Eat
+  - sprite: {fileID: 21300000, guid: 0f95a818d331cea4f89781749d81777a, type: 3}
+    text: Fire
+  - sprite: {fileID: 21300000, guid: f111e1ad51585624fb086edadabaad7d, type: 3}
+    text: Fruits
+  - sprite: {fileID: 21300000, guid: 403dfa176f6a14f4781852e07cb8d0d7, type: 3}
+    text: Garden
+  - sprite: {fileID: 21300000, guid: f7c1b37966be14b42a33357018368cd0, type: 3}
+    text: House
+  - sprite: {fileID: 21300000, guid: 6098da84781ed8b45a5d1e40cc3695db, type: 3}
+    text: Lemon
+  - sprite: {fileID: 21300000, guid: f521e342ae72d3d42b67eedf6c08bf6f, type: 3}
+    text: Mountain
+  - sprite: {fileID: 21300000, guid: 8d8d568a12d9d8b4a9cde6bc58eb06ed, type: 3}
+    text: People

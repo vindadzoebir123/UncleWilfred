@@ -5,24 +5,13 @@ using UniRx;
 
 namespace UncleWilfred
 {
-    public class PanelConfirmationMenu : Menu<PanelConfirmationMenu>
+    public class PanelLevel1Menu : Menu<PanelLevel1Menu>
     {
-        public PanelConfirmationView view;
+        public PanelLevel1View view;
 
         public override void Initialize()
         {
             view.Init();
-
-            view.beginnerBtn.OnClickAsObservable().TakeUntilDestroy(this).Subscribe(x => {
-                PanelLevel1Menu.Show();
-                //call play window here
-            });
-
-            view.testBtn.OnClickAsObservable().TakeUntilDestroy(this).Subscribe(x => {
-                PanelPlacementTestMenu.Show();
-                //call setting here
-            });
-            
         }
 
         public static void Show()
