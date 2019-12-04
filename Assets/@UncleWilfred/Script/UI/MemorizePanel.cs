@@ -23,7 +23,7 @@ namespace UncleWilfred
         public TextMeshProUGUI textImage;
         public GameObject questionParent;
 
-        public float countingTimer = 3f;
+        public float countingTimer = 0.2f;
 
         int currentQuestion = 0;
 
@@ -56,7 +56,7 @@ namespace UncleWilfred
             currentQuestion++;
             if(currentQuestion<questions.Count-1)
             {
-                countingTimer = Mathf.Clamp(countingTimer-0.2f, 1f, 3f);
+                // countingTimer = Mathf.Clamp(countingTimer-0.2f, 1f, 3f);
                 StartCoroutine(ShowQuestion(countingTimer));
             }
             else

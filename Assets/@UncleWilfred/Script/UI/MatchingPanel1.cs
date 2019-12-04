@@ -4,6 +4,7 @@ using UnityEngine;
 using UniRx;
 using UnityEngine.UI;
 using System.Linq;
+using System;
 
 namespace UncleWilfred
 {
@@ -14,56 +15,95 @@ namespace UncleWilfred
 
         public GameObject questionParent;
         public List<Level1Item> level1Items;
+        public List<LevelDragText> textDrags;
 
-        List<Sprite> spriteList = new List<Sprite>();
-        List<string> textList = new List<string>();
         List<Question> questions = new List<Question>();
+
+        int correctedAnswered;
+        int startCount = 0;
+
+        public Action OnFinishPhase;
 
         public void Init(List<Question> input)
         {
-            questions = input;
+            questions = input.OrderBy( x => UnityEngine.Random.value ).ToList( );
             animator.enabled = true;
-            ScrambleSprites();
-            ScrambleText();
             animatorHelper.onFinish = delegate{
                 animator.enabled = false;
-                ViewQuestions();
+                RenderQuestion();
             };
+            startCount = 0;
         }
 
-        void ViewQuestions()
+        void RenderQuestion()
         {
+            ViewQuestions(startCount);
+            ViewTextItems(startCount);
+        }
+
+        void ViewQuestions(int startCount)
+        {
+            correctedAnswered = 0;
+
             questionParent.SetActive(true);
             int count = level1Items.Count;
             for(int i=0;i<count;i++)
             {
-                level1Items[i].Init(spriteList[i], textList[i]);
+                int index = startCount + i;
+                level1Items[i].Init(questions[index].sprite, questions[index].text);
+                level1Items[i].OnCorrectAnswered = delegate{
+                    correctedAnswered +=1;
+                    CheckFinish();
+                };
             }
         }
 
-        void ScrambleSprites()
+        void CheckFinish()
         {
-            spriteList.Clear();
-
-            for(int i=0;i<questions.Count;i++)
+            if(correctedAnswered>=5)
             {
-                spriteList.Add(questions[i].sprite);
+                Debug.Log("Has answered all correctly");
+                StartCoroutine(ShowNextPhase());
             }
-
-            spriteList = spriteList.OrderBy( x => UnityEngine.Random.value ).ToList( );
+            else
+            {
+                Debug.Log("Correct answer : " + correctedAnswered);
+            }
         }
 
-        void ScrambleText()
+        IEnumerator ShowNextPhase()
         {
-            textList.Clear();
+            yield return new WaitForSeconds(0.2f);
 
-            for(int i=0;i<questions.Count;i++)
+            if(startCount + level1Items.Count < questions.Count)
+                {
+                    startCount += level1Items.Count;
+                    RenderQuestion();
+                }
+                else
+                {
+                    if(OnFinishPhase!=null)
+                        OnFinishPhase();
+                }
+        }
+
+        void ViewTextItems(int startCount)
+        {
+            List<string> textList = new List<string>();
+
+            int count = textDrags.Count;
+            for(int i=0;i<count;i++)
             {
-                textList.Add(questions[i].text);
+                int index = startCount + i;
+                textList.Add(questions[index].text);
             }
 
-            textList = textList.OrderBy(x => UnityEngine.Random.value).ToList( );
+            textList = textList.OrderBy(x => UnityEngine.Random.value).ToList();
+            for(int i=0;i<count;i++)
+            {
+                textDrags[i].Init(textList[i]);
+                Debug.Log("Init text item : " + i + ", count : " + count);
+            }
         }
-        
     }
 }

@@ -13,27 +13,53 @@ MonoBehaviour:
   m_Name: Level1Data
   m_EditorClassIdentifier: 
   questions:
-  - sprite: {fileID: 21300000, guid: 7370f2eda2dddbf4cbb22eb44b1ec9a8, type: 3}
-    text: Bird
-  - sprite: {fileID: 21300000, guid: e6a7de5da5334e54ca1536b83c403128, type: 3}
-    text: Cat
-  - sprite: {fileID: 21300000, guid: 35a809fede043404ca30321f1be16db0, type: 3}
-    text: Cliff
-  - sprite: {fileID: 21300000, guid: 3a018138981ab7443b2dd7b19b76cfc1, type: 3}
-    text: Dog
-  - sprite: {fileID: 21300000, guid: 3e86c2a701fab0240a64b4c7eec30672, type: 3}
-    text: Eat
-  - sprite: {fileID: 21300000, guid: 0f95a818d331cea4f89781749d81777a, type: 3}
-    text: Fire
-  - sprite: {fileID: 21300000, guid: f111e1ad51585624fb086edadabaad7d, type: 3}
-    text: Fruits
-  - sprite: {fileID: 21300000, guid: 403dfa176f6a14f4781852e07cb8d0d7, type: 3}
-    text: Garden
-  - sprite: {fileID: 21300000, guid: f7c1b37966be14b42a33357018368cd0, type: 3}
-    text: House
-  - sprite: {fileID: 21300000, guid: 6098da84781ed8b45a5d1e40cc3695db, type: 3}
-    text: Lemon
-  - sprite: {fileID: 21300000, guid: f521e342ae72d3d42b67eedf6c08bf6f, type: 3}
-    text: Mountain
-  - sprite: {fileID: 21300000, guid: 8d8d568a12d9d8b4a9cde6bc58eb06ed, type: 3}
-    text: People
+  - sprite: {fileID: 21300000, guid: 0b207cd97d698ba408751036b4ae916c, type: 3}
+    text: Body
+  - sprite: {fileID: 21300000, guid: 442c5896655b1dc4cbb0990d25c54b59, type: 3}
+    text: Neck
+  - sprite: {fileID: 21300000, guid: 6fb100bbe01f38f46b0325c9dd4b7b29, type: 3}
+    text: Chest
+  - sprite: {fileID: 21300000, guid: 1214f89be13bc4240a32e86733663ce2, type: 3}
+    text: Abdomen
+  - sprite: {fileID: 21300000, guid: c8ae6e2bdbd91564e98548313c14d58e, type: 3}
+    text: Hip
+  - sprite: {fileID: 21300000, guid: bf706531c5f4c9f4caa82332cc7b1032, type: 3}
+    text: Shin
+  - sprite: {fileID: 21300000, guid: bd451846fa5597c459dd1107df7a76fd, type: 3}
+    text: Head
+  - sprite: {fileID: 21300000, guid: cfb5cc1df582f794ab1c773f57dc3965, type: 3}
+    text: Breast
+  - sprite: {fileID: 21300000, guid: 696341932d700624b9751d26d015daab, type: 3}
+    text: Waist
+  - sprite: {fileID: 21300000, guid: e89af28dc4d89af4c94f866d8fcfa838, type: 3}
+    text: Navel
+  - sprite: {fileID: 21300000, guid: f7787a0df4d5bf147926eb99ae45b5b6, type: 3}
+    text: Forearm
+  - sprite: {fileID: 21300000, guid: 9b0ce808e986dfb43af6eddcf5ab2efa, type: 3}
+    text: Thigh
+  - sprite: {fileID: 21300000, guid: d8542bb5196973042b0a67954092c5fc, type: 3}
+    text: Knee
+  - sprite: {fileID: 21300000, guid: 303390b2ab80459478ddd3dcdf4be2a2, type: 3}
+    text: Foot
+  - sprite: {fileID: 21300000, guid: 4e45cbb9ffd690741b4ba4657c91ef6c, type: 3}
+    text: Nape
+  - sprite: {fileID: 21300000, guid: 9d1276259f7deb14da402d3d3f86d178, type: 3}
+    text: Shoulder
+  - sprite: {fileID: 21300000, guid: 9df6f4c61c7fff54ca2a8c8e30a08680, type: 3}
+    text: Arm
+  - sprite: {fileID: 21300000, guid: b85e0dc3549992d47ae7177c3b0b073e, type: 3}
+    text: Elbow
+  - sprite: {fileID: 21300000, guid: 818cb0b5b2060aa4b9f100857dabc1ae, type: 3}
+    text: Wrist
+  - sprite: {fileID: 21300000, guid: 6fad9c8573141cf46bd42f933ee0bbf3, type: 3}
+    text: Hand
+  - sprite: {fileID: 21300000, guid: 0009612e6f7ca744aaf5be1634fd14a7, type: 3}
+    text: Ankle
+  - sprite: {fileID: 21300000, guid: f66c9b158ff860f4ea9163012b058d01, type: 3}
+    text: Back
+  - sprite: {fileID: 21300000, guid: 7dd5f10c4164c5541a982a87ab346872, type: 3}
+    text: Armpit
+  - sprite: {fileID: 21300000, guid: 0da17a3324d36ac418009edb6f933cfd, type: 3}
+    text: Calf
+  - sprite: {fileID: 21300000, guid: 5821817aa0ca56a4aaf6527989cf8275, type: 3}
+    text: Heel
