@@ -19,7 +19,8 @@ namespace UncleWilfred
         public Animator animator;
         public AnimationHelper animatorHelper;
         public Animator imageAnim;
-        public Image imageSprite;
+        // public Image imageSprite;
+        public Animator gifAnim;
         public TextMeshProUGUI textImage;
         public GameObject questionParent;
 
@@ -47,7 +48,8 @@ namespace UncleWilfred
         {
 
             questionParent.SetActive(true);
-            imageSprite.sprite = questions[currentQuestion].sprite;
+            // imageSprite.sprite = questions[currentQuestion].sprite;
+            gifAnim.Play(questions[currentQuestion].text);
             textImage.text = questions[currentQuestion].text;
             imageAnim.SetTrigger("Flip");
 

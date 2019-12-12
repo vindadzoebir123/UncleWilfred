@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c8af22b84c83b849b09be5dd3d47d29, type: 3}
+  m_Name: SentenceQuiz
+  m_EditorClassIdentifier: 
+  listSentence:
+  - sentence: They were alone, and she turned and put her head on his {0}.
+    answers:
+    - shoulder
+    - wrist
+    - back
+  - sentence: Two grassy hills rise, like {0}, out of a rolling plain of grass.
+    answers:
+    - breasts
+    - hands
+    - shins
+  - sentence: You need to have strong {0} muscles to skate.
+    answers:
+    - thigh
+    - ankle
+    - chest
+  - sentence: Beckham's injury problems began when he twisted his {0} playing for
+      his country against Estonia in June.
+    answers:
+    - ankle
+    - navel
+    - knee
+  - sentence: Mary took the bracelet off her {0}.
+    answers:
+    - wrist
+    - heel
+    - waist
+  - sentence: She placed her hands on her {0}.
+    answers:
+    - hips
+    - elbows
+    - forearms
+  - sentence: The giraffe has a long {0}.
+    answers:
+    - neck
+    - armpit
+    - nape
+  - sentence: The boots are tight around the {0}.
+    answers:
+    - calf
+    - abdomen
+    - body
+  - sentence: Tom came out of the bathroom with a towel around his {0}.
+    answers:
+    - waist
+    - shin
+    - hand
+  - sentence: He squashed the insect with the {0} of his foot.
+    answers:
+    - heel
+    - head
+    - ankle

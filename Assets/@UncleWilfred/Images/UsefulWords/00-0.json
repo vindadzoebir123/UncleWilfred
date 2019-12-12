@@ -1,0 +1,40 @@
+{ "skeleton": { "images": "images/00body/" },
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "frame_50_delay-0.04s", "bone": "root", "attachment": "frame_50_delay-0.04s" },
+	{ "name": "frame_51_delay-0.04s", "bone": "root", "attachment": "frame_51_delay-0.04s" },
+	{ "name": "frame_53_delay-0.04s", "bone": "root", "attachment": "frame_53_delay-0.04s" },
+	{ "name": "frame_54_delay-0.04s", "bone": "root", "attachment": "frame_54_delay-0.04s" },
+	{ "name": "frame_57_delay-0.04s", "bone": "root", "attachment": "frame_57_delay-0.04s" },
+	{ "name": "frame_59_delay-0.04s", "bone": "root", "attachment": "frame_59_delay-0.04s" },
+	{ "name": "frame_60_delay-0.04s", "bone": "root", "attachment": "frame_60_delay-0.04s" }
+],
+"skins": {
+	"default": {
+		"frame_50_delay-0.04s": {
+			"frame_50_delay-0.04s": { "x": 76.5, "y": -107, "width": 155, "height": 216 }
+		},
+		"frame_51_delay-0.04s": {
+			"frame_51_delay-0.04s": { "x": 76.5, "y": -107, "width": 155, "height": 216 }
+		},
+		"frame_53_delay-0.04s": {
+			"frame_53_delay-0.04s": { "x": 76.5, "y": -107, "width": 155, "height": 216 }
+		},
+		"frame_54_delay-0.04s": {
+			"frame_54_delay-0.04s": { "x": 76.5, "y": -107, "width": 155, "height": 216 }
+		},
+		"frame_57_delay-0.04s": {
+			"frame_57_delay-0.04s": { "x": 76.5, "y": -107, "width": 155, "height": 216 }
+		},
+		"frame_59_delay-0.04s": {
+			"frame_59_delay-0.04s": { "x": 76.5, "y": -107, "width": 155, "height": 216 }
+		},
+		"frame_60_delay-0.04s": {
+			"frame_60_delay-0.04s": { "x": 76.5, "y": -107, "width": 155, "height": 216 }
+		}
+	}
+},
+"animations": { "animation": {} }
+}

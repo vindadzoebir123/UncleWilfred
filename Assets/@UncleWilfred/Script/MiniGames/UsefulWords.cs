@@ -13,6 +13,7 @@ namespace UncleWilfred
 
         public MemorizePanel memorizePanel;
         public MatchingPanel1 matchingPanel;
+        public SentencePanel sentencePanel;
 
         void Start()
         {
@@ -26,6 +27,7 @@ namespace UncleWilfred
 
             memorizePanel.gameObject.SetActive(false);
             matchingPanel.gameObject.SetActive(false);
+            sentencePanel.gameObject.SetActive(false);
 
             questions = question.questions.OrderBy( x => UnityEngine.Random.value ).ToList( );
 
@@ -73,7 +75,9 @@ namespace UncleWilfred
 
         void CompleteLevel()
         {
-            Debug.Log("Complete levels");
+            matchingPanel.gameObject.SetActive(false);
+            sentencePanel.gameObject.SetActive(true);
+            sentencePanel.Init();
         }
     }
 }
