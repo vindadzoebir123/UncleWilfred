@@ -18,49 +18,58 @@ MonoBehaviour:
     - shoulder
     - wrist
     - back
+    audio: {fileID: 8300000, guid: c57d7a2a743b20b48bee403ec7b58515, type: 3}
   - sentence: Two grassy hills rise, like {0}, out of a rolling plain of grass.
     answers:
     - breasts
     - hands
     - shins
+    audio: {fileID: 8300000, guid: 2314cd4498608b34190df3f29577f1bb, type: 3}
   - sentence: You need to have strong {0} muscles to skate.
     answers:
     - thigh
     - ankle
     - chest
-  - sentence: Beckham's injury problems began when he twisted his {0} playing for
-      his country against Estonia in June.
+    audio: {fileID: 8300000, guid: c113d1f0e789b7a4d9a666c79c90856a, type: 3}
+  - sentence: Beckham twisted his {0} while playing against Estonia.
     answers:
     - ankle
     - navel
     - knee
+    audio: {fileID: 8300000, guid: 5dfc7b4f0fd1f9e41adfceefd98bae1c, type: 3}
   - sentence: Mary took the bracelet off her {0}.
     answers:
     - wrist
     - heel
     - waist
+    audio: {fileID: 8300000, guid: ed964458d54a10f4b82400c93cf921aa, type: 3}
   - sentence: She placed her hands on her {0}.
     answers:
     - hips
     - elbows
     - forearms
+    audio: {fileID: 8300000, guid: 0435c2907b3329042ae6e6b79580f424, type: 3}
   - sentence: The giraffe has a long {0}.
     answers:
     - neck
     - armpit
     - nape
+    audio: {fileID: 8300000, guid: ca2e5c4bf274f704db9a3f3ee9470b8e, type: 3}
   - sentence: The boots are tight around the {0}.
     answers:
     - calf
     - abdomen
     - body
+    audio: {fileID: 8300000, guid: 92559c4bce8745447a07dabca672ec5d, type: 3}
   - sentence: Tom came out of the bathroom with a towel around his {0}.
     answers:
     - waist
     - shin
     - hand
+    audio: {fileID: 8300000, guid: 9db084f03345a9d4fb1dca2b31d99aa2, type: 3}
   - sentence: He squashed the insect with the {0} of his foot.
     answers:
     - heel
     - head
     - ankle
+    audio: {fileID: 8300000, guid: feaf04faaf19b2142a1733b681ee164e, type: 3}

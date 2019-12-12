@@ -15,5 +15,7 @@ namespace UncleWilfred
     {
         public string sentence;
         public string[] answers = new string[3];
+
+        public AudioClip audio;
     }
 }

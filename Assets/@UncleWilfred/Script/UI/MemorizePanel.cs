@@ -52,6 +52,7 @@ namespace UncleWilfred
             gifAnim.Play(questions[currentQuestion].text);
             textImage.text = questions[currentQuestion].text;
             imageAnim.SetTrigger("Flip");
+            AudioManager.Instance.Play(questions[currentQuestion].audio);
 
             yield return new WaitForSeconds(timer);
 

@@ -46,7 +46,9 @@ namespace UncleWilfred
                     {
                         sentenceText.text = string.Format(listSentence[index].sentence, "<color=#1CE0FF>" + listSentence[index].answers[0] + "</color>");
                         item.gameObject.SetActive(false);
-                        StartCoroutine(ShowNextQuiz());
+                        AudioManager.Instance.Play(listSentence[index].audio);
+                        float timer = listSentence[index].audio.length + 0.5f;
+                        StartCoroutine(ShowNextQuiz(timer));
                     }
                     else
                         item.WrongAnswer();
@@ -54,9 +56,9 @@ namespace UncleWilfred
             }
         }
 
-        IEnumerator ShowNextQuiz()
+        IEnumerator ShowNextQuiz(float delay)
         {
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(delay);
 
             index++;
             if(index<=listSentence.Count-1)

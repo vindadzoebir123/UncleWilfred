@@ -15,51 +15,76 @@ MonoBehaviour:
   questions:
   - sprite: {fileID: 21300000, guid: 0b207cd97d698ba408751036b4ae916c, type: 3}
     text: Body
+    audio: {fileID: 8300000, guid: d95b8581c4888ed4b8482173c116bc26, type: 3}
   - sprite: {fileID: 21300000, guid: 442c5896655b1dc4cbb0990d25c54b59, type: 3}
     text: Neck
+    audio: {fileID: 8300000, guid: 1516531baf51c5c4e8fea0c36e8ef3df, type: 3}
   - sprite: {fileID: 21300000, guid: 6fb100bbe01f38f46b0325c9dd4b7b29, type: 3}
     text: Chest
+    audio: {fileID: 8300000, guid: 2ea88a8ee35f66b4088a2c2238f6524a, type: 3}
   - sprite: {fileID: 21300000, guid: 1214f89be13bc4240a32e86733663ce2, type: 3}
     text: Abdomen
+    audio: {fileID: 8300000, guid: 33c39a10a4256ae458a8c53044545f45, type: 3}
   - sprite: {fileID: 21300000, guid: c8ae6e2bdbd91564e98548313c14d58e, type: 3}
     text: Hip
+    audio: {fileID: 8300000, guid: a7e3b4ec1257feb4ebfb7bbccbaa7919, type: 3}
   - sprite: {fileID: 21300000, guid: bf706531c5f4c9f4caa82332cc7b1032, type: 3}
     text: Shin
+    audio: {fileID: 8300000, guid: 5542fa32809c1774e92a7b9ef7a6873f, type: 3}
   - sprite: {fileID: 21300000, guid: bd451846fa5597c459dd1107df7a76fd, type: 3}
     text: Head
+    audio: {fileID: 8300000, guid: 28e753a4872275b4f813af34906c9c9a, type: 3}
   - sprite: {fileID: 21300000, guid: cfb5cc1df582f794ab1c773f57dc3965, type: 3}
     text: Breast
+    audio: {fileID: 8300000, guid: eed6ae84d488ecd408612893e0edb082, type: 3}
   - sprite: {fileID: 21300000, guid: 696341932d700624b9751d26d015daab, type: 3}
     text: Waist
+    audio: {fileID: 8300000, guid: 33d9c1b83c757ca40a22f49728423bd9, type: 3}
   - sprite: {fileID: 21300000, guid: e89af28dc4d89af4c94f866d8fcfa838, type: 3}
     text: Navel
+    audio: {fileID: 8300000, guid: e55b6737ca855e64d805fdfec2a899cf, type: 3}
   - sprite: {fileID: 21300000, guid: f7787a0df4d5bf147926eb99ae45b5b6, type: 3}
     text: Forearm
+    audio: {fileID: 8300000, guid: 02287f49ecaa0ea4faeb00445b07df1e, type: 3}
   - sprite: {fileID: 21300000, guid: 9b0ce808e986dfb43af6eddcf5ab2efa, type: 3}
     text: Thigh
+    audio: {fileID: 8300000, guid: 04942aecd37039047bcbd62d674a9c94, type: 3}
   - sprite: {fileID: 21300000, guid: d8542bb5196973042b0a67954092c5fc, type: 3}
     text: Knee
+    audio: {fileID: 8300000, guid: 6a753e019a9fc824da4185e636d52015, type: 3}
   - sprite: {fileID: 21300000, guid: 303390b2ab80459478ddd3dcdf4be2a2, type: 3}
     text: Foot
+    audio: {fileID: 8300000, guid: c6515c7b779e02d4db2ec1f0dafa2eb8, type: 3}
   - sprite: {fileID: 21300000, guid: 4e45cbb9ffd690741b4ba4657c91ef6c, type: 3}
     text: Nape
+    audio: {fileID: 8300000, guid: 2fe2e94b59ed203488582a753e620487, type: 3}
   - sprite: {fileID: 21300000, guid: 9d1276259f7deb14da402d3d3f86d178, type: 3}
     text: Shoulder
+    audio: {fileID: 8300000, guid: 5d359b27239860b43bbcdcc3f77c446f, type: 3}
   - sprite: {fileID: 21300000, guid: 9df6f4c61c7fff54ca2a8c8e30a08680, type: 3}
     text: Arm
+    audio: {fileID: 8300000, guid: e25e062d34e7eee428d0662d07ef2723, type: 3}
   - sprite: {fileID: 21300000, guid: b85e0dc3549992d47ae7177c3b0b073e, type: 3}
     text: Elbow
+    audio: {fileID: 8300000, guid: 405d8b4f079ad144798b31e67c41d3d2, type: 3}
   - sprite: {fileID: 21300000, guid: 818cb0b5b2060aa4b9f100857dabc1ae, type: 3}
     text: Wrist
+    audio: {fileID: 8300000, guid: 1c7556333a43cb845b27770d5b5dc2b6, type: 3}
   - sprite: {fileID: 21300000, guid: 6fad9c8573141cf46bd42f933ee0bbf3, type: 3}
     text: Hand
+    audio: {fileID: 8300000, guid: 02c3bc3f2e555b845baea2e8e8209c38, type: 3}
   - sprite: {fileID: 21300000, guid: 0009612e6f7ca744aaf5be1634fd14a7, type: 3}
     text: Ankle
+    audio: {fileID: 8300000, guid: 842fb1366c9c0d149b4966eba4c15756, type: 3}
   - sprite: {fileID: 21300000, guid: f66c9b158ff860f4ea9163012b058d01, type: 3}
     text: Back
+    audio: {fileID: 8300000, guid: 1c4c67e32f1b385459457ab4a06c5a67, type: 3}
   - sprite: {fileID: 21300000, guid: 7dd5f10c4164c5541a982a87ab346872, type: 3}
     text: Armpit
+    audio: {fileID: 8300000, guid: b45a767350023fe408d2cf45f06d35a3, type: 3}
   - sprite: {fileID: 21300000, guid: 0da17a3324d36ac418009edb6f933cfd, type: 3}
     text: Calf
+    audio: {fileID: 8300000, guid: 6c88f39bcbc02764d92858773c1aa21c, type: 3}
   - sprite: {fileID: 21300000, guid: 5821817aa0ca56a4aaf6527989cf8275, type: 3}
     text: Heel
+    audio: {fileID: 8300000, guid: e5485c175f49d0f4391612b2e94411f5, type: 3}

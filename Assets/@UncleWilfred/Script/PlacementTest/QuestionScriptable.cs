@@ -15,5 +15,6 @@ namespace UncleWilfred
     {
         public Sprite sprite;
         public string text;
+        public AudioClip audio;
     }
 }
