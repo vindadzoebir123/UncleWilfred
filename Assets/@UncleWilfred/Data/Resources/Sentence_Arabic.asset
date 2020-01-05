@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c8af22b84c83b849b09be5dd3d47d29, type: 3}
+  m_Name: Sentence_Arabic
+  m_EditorClassIdentifier: 
+  listSentence:
+  - sentence: He swims like a {0}.
+    answers:
+    - Fish
+    - Vegetarian
+    - 'Strawberry '
+    audio: {fileID: 8300000, guid: 3806ce0b60ac2e148b9e124c57678b11, type: 3}
+  - sentence: 'Do you want boiled or fried {0}? '
+    answers:
+    - Egg
+    - Juice
+    - Fruit
+    audio: {fileID: 8300000, guid: 658e5a24290fc8143887788d94c31cff, type: 3}
+  - sentence: Do you prefer tea with milk or {0}?
+    answers:
+    - Lemon
+    - Salt
+    - Beef
+    audio: {fileID: 8300000, guid: 22b5a071115d3024b85f63ca689103b6, type: 3}
+  - sentence: I like {0} ice cream best.
+    answers:
+    - Strawberry
+    - Meat
+    - Sugar
+    audio: {fileID: 8300000, guid: c69e224f9ee446b4b9b17e1aed647ed1, type: 3}
+  - sentence: Eat everything on your {0}!
+    answers:
+    - Plate
+    - Dinner
+    - Pork
+    audio: {fileID: 8300000, guid: 38fa626a02339cd4685810852f8c2ead, type: 3}
+  - sentence: I drank orange {0}
+    answers:
+    - Juice
+    - Fruit
+    - Wine
+    audio: {fileID: 8300000, guid: a0d237856c2c2c64bbc1bcb31ab1eb79, type: 3}
+  - sentence: '{0} is served between 7 and 10.'
+    answers:
+    - Breakfast
+    - Lemon
+    - Plate
+    audio: {fileID: 8300000, guid: affd2aba3c4212c4d88513e4c02f0c63, type: 3}
+  - sentence: McDonalds uses {0} from Argentina.
+    answers:
+    - 'Beef '
+    - Lunch
+    - Vegetarian
+    audio: {fileID: 8300000, guid: 3cac440d464fd474cb76faf7f6f3f9fd, type: 3}

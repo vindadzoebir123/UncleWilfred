@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c8af22b84c83b849b09be5dd3d47d29, type: 3}
+  m_Name: Sentence_Other
+  m_EditorClassIdentifier: 
+  listSentence:
+  - sentence: 'What {0} flowers! '
+    answers:
+    - Beautiful
+    - Powerful
+    - 'Important '
+    audio: {fileID: 8300000, guid: de8c856d01e67da4584c26bdfdd78b28, type: 3}
+  - sentence: You pay for {0}.
+    answers:
+    - Quality
+    - Advantage
+    - Difference
+    audio: {fileID: 8300000, guid: 76c8caed44be72a4ba99fc3e11102027, type: 3}
+  - sentence: It is of no {0}.
+    answers:
+    - Importance
+    - Personality
+    - Identity
+    audio: {fileID: 8300000, guid: 7e5546a61156e9a4c9ae6e5e963622fe, type: 3}
+  - sentence: 'Goodbye and good {0}! '
+    answers:
+    - Luck
+    - Expression
+    - Force
+    audio: {fileID: 8300000, guid: 5e2f507c2e1d76c46bcece9d5754f7b2, type: 3}
+  - sentence: Do you have an {0} card?
+    answers:
+    - Identity
+    - Quality
+    - Power
+    audio: {fileID: 8300000, guid: f2302828fb1212e489d03b697d1784aa, type: 3}
+  - sentence: The {0}'s out.
+    answers:
+    - Power
+    - Difference
+    - Look
+    audio: {fileID: 8300000, guid: a1c1160b606335c42bd2a1c670670525, type: 3}

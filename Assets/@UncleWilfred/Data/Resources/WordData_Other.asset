@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71d685530f92c8f4cafff0f7bf949e35, type: 3}
+  m_Name: WordData_Other
+  m_EditorClassIdentifier: 
+  questions:
+  - sprite: {fileID: 21300000, guid: 942396a1b71c6c34d9ba3e5d466971b6, type: 3}
+    text: advantage
+    audio: {fileID: 8300000, guid: 766692d49ddd24a4cb46ea863bded997, type: 3}
+  - sprite: {fileID: 21300000, guid: dc78a1d295b9f3441ada907c07867928, type: 3}
+    text: beauty
+    audio: {fileID: 8300000, guid: 172be23c57c82f447beddc6cb4d1bf4d, type: 3}
+  - sprite: {fileID: 21300000, guid: 937794f9914440248b554332302db87c, type: 3}
+    text: difference
+    audio: {fileID: 8300000, guid: 1ada15a7696a8e9439b734bb30a3ee8f, type: 3}
+  - sprite: {fileID: 21300000, guid: ebd7a1af79dd7514481d6d01a0b5c6cc, type: 3}
+    text: expression
+    audio: {fileID: 8300000, guid: 580cd7744e1929a4fba1b36aae091061, type: 3}
+  - sprite: {fileID: 21300000, guid: b6a836d578c72d141b4a9f6e51997505, type: 3}
+    text: force
+    audio: {fileID: 8300000, guid: 2be04a4c8236a264a84eb7bd1e84f03e, type: 3}
+  - sprite: {fileID: 21300000, guid: bb6adb4bc0212b74e8449603666eb4bd, type: 3}
+    text: identity
+    audio: {fileID: 8300000, guid: 30e2780c34cfa2a49aec70d765892be3, type: 3}
+  - sprite: {fileID: 21300000, guid: 61e5465d6d05c094a8a4659058d7d12c, type: 3}
+    text: importance
+    audio: {fileID: 8300000, guid: 7fdfebd1538e5ca489a1f0c6665aee43, type: 3}
+  - sprite: {fileID: 21300000, guid: c079c71356738b146ab142cb91f5e44e, type: 3}
+    text: look
+    audio: {fileID: 8300000, guid: 16ed46d41fc6c4949bc6a77382dbac54, type: 3}
+  - sprite: {fileID: 21300000, guid: 9f7decdaf8e47bd49bf773d62d4978b2, type: 3}
+    text: luck
+    audio: {fileID: 8300000, guid: a7b29fb09ad6c5340ae1dbc0efe90345, type: 3}
+  - sprite: {fileID: 21300000, guid: 209bb4b573e06a14a9e35be7946f5fb3, type: 3}
+    text: personality
+    audio: {fileID: 8300000, guid: 3347a199c0670d443a0ef08e257b4573, type: 3}
+  - sprite: {fileID: 21300000, guid: 093938caf5d5876499f0dcee023add86, type: 3}
+    text: power
+    audio: {fileID: 8300000, guid: 37b1fc28ce0335b4dad5121e02c68dfe, type: 3}
+  - sprite: {fileID: 21300000, guid: cb9c072671cf6d44c92e6eb36a626d14, type: 3}
+    text: quality
+    audio: {fileID: 8300000, guid: dc867651e1128d54f83439ab1d5e07a9, type: 3}
