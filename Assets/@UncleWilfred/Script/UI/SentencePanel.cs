@@ -4,29 +4,54 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
 using TMPro;
+using UniRx;
+using System;
 
 namespace UncleWilfred
 {
     public class SentencePanel : MonoBehaviour
     {
         public TextMeshProUGUI sentenceText;
+        public TextMeshProUGUI scoreText;
 
         public LevelDragText[] textDrag;
 
         List<SentenceData> listSentence = new List<SentenceData>();
         int index;
 
+        Subject<Unit> onCompleteSentence;
+
+        bool isCombo;
+        float timerCountDown;
+        public IObservable<Unit> OnCompleteSentenceAsObservable()
+        {
+            return onCompleteSentence ?? (onCompleteSentence = new Subject<Unit>());
+        }
+
         // void Start()
         // {
         //     Init();
         // }
-        public void Init()
+        public void Init(List<SentenceData> data, IntReactiveProperty score)
         {
-            SentenceScriptable item = Resources.Load<SentenceScriptable>("SentenceQuiz");
-            listSentence = item.listSentence.OrderBy(x => UnityEngine.Random.value).ToList();
+            // SentenceScriptable item = Resources.Load<SentenceScriptable>("Sentence_Arabic");
+            isCombo = false;
+
+            timerCountDown = 0f;
+
+            Observable.Interval(TimeSpan.FromMilliseconds(100)).TakeUntilDestroy(this).Subscribe(x =>
+            {
+                timerCountDown+=0.1f;
+            });
+
+            listSentence.Clear();
+            listSentence = data; //.OrderBy(x => UnityEngine.Random.value).ToList();
 
             index = 0;
 
+            score.TakeUntilDestroy(this).Subscribe(x => {
+                scoreText.text = x.ToString();
+            });
             ShowQuiz();
         }
 
@@ -49,9 +74,17 @@ namespace UncleWilfred
                         AudioManager.Instance.Play(listSentence[index].audio);
                         float timer = listSentence[index].audio.length + 0.5f;
                         StartCoroutine(ShowNextQuiz(timer));
+                        UsefulWords.Instance.AddScore(10);
+                        if(isCombo)
+                            UsefulWords.Instance.AddScore(5, true);
+                        
+                        isCombo = true;
                     }
                     else
+                    {
+                        isCombo = false;
                         item.WrongAnswer();
+                    }
                 };
             }
         }
@@ -63,6 +96,27 @@ namespace UncleWilfred
             index++;
             if(index<=listSentence.Count-1)
                 ShowQuiz();
+            
+            else
+            {
+                 if(timerCountDown<=3f)
+                {
+                    // AudioManager.Instance.Play(brilliant);
+                    UsefulWords.Instance.AddScore(30, true);
+                }
+                else if(timerCountDown<=5f)
+                {
+                    // AudioManager.Instance.Play(amazing);
+                    UsefulWords.Instance.AddScore(10, true);
+                }
+                // else
+                // {
+                //     AudioManager.Instance.Play(welldone);
+                // }
+                yield return new WaitForSeconds(0.5f);
+                if(onCompleteSentence!=null)
+                    onCompleteSentence.OnNext(Unit.Default);
+            }
         }
     }
 }

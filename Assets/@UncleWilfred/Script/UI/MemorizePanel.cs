@@ -57,7 +57,7 @@ namespace UncleWilfred
             yield return new WaitForSeconds(timer);
 
             currentQuestion++;
-            if(currentQuestion<questions.Count-1)
+            if(currentQuestion<=questions.Count-1)
             {
                 // countingTimer = Mathf.Clamp(countingTimer-0.2f, 1f, 3f);
                 StartCoroutine(ShowQuestion(countingTimer));

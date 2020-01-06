@@ -33,7 +33,7 @@ namespace UncleWilfred
             memorizePanel.OnCompleteMemorizeAsObservable().TakeUntilDestroy(this).Subscribe(x => {
                 memorizePanel.gameObject.SetActive(false);
                 matchingPanel.gameObject.SetActive(true);
-                matchingPanel.Init(question.questions);
+                // matchingPanel.Init(question.questions);
             });
         }
        

@@ -11,7 +11,7 @@ namespace UncleWilfred
         public Image imageSprite;
         public TextMeshProUGUI textImage;
 
-        public Action OnCorrectAnswered;
+        public Action<bool> OnCorrectAnswered;
         string answer;
 
         public void Init(Sprite sprite, string answer)
@@ -26,17 +26,20 @@ namespace UncleWilfred
         {
             if(check == answer)
             {
-                RenderTrue();
+                RenderTrue(true);
                 return true;
             }
+            RenderTrue(false);
             return false;
         }
 
-        void RenderTrue()
+        void RenderTrue(bool correct)
         {
-            textImage.gameObject.SetActive(true);
+            if(correct)
+                textImage.gameObject.SetActive(true);
+            
             if(OnCorrectAnswered!=null)
-                OnCorrectAnswered();
+                OnCorrectAnswered(correct);
         }
     }
 }
