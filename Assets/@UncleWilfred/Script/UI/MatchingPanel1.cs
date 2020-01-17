@@ -19,7 +19,11 @@ namespace UncleWilfred
         public List<Level1Item> level1Items;
         public List<LevelDragText> textDrags;
         public TextMeshProUGUI scoreText;
+        public Image clockImage;
+        public Color[] clockColor;
         bool isCombo;
+
+        // int currentScore;
 
         public AudioClip brilliant, amazing, welldone;
 
@@ -31,15 +35,25 @@ namespace UncleWilfred
         int startCount = 0;
 
         public Action OnFinishPhase;
+        bool isPlay;
 
         public void Init(List<Question> input, IntReactiveProperty score)
         {
+            isPlay = false;
             timerCountdown = 0f;
             isCombo = false;
 
-            Observable.Interval(TimeSpan.FromMilliseconds(100)).TakeUntilDestroy(this).Subscribe(x =>
+            Observable.Interval(TimeSpan.FromSeconds(0.2f)).TakeUntilDestroy(this).Subscribe(x =>
             {
-                timerCountdown+=0.1f;
+                if(isPlay)
+                {
+                    timerCountdown+=0.1f;
+                    clockImage.fillAmount = 1 - (timerCountdown/5f);
+                    if(timerCountdown<3f)
+                        clockImage.color = clockColor[0];
+                    else
+                        clockImage.color = clockColor[1];
+                }
             });
 
             questions = input.OrderBy( x => UnityEngine.Random.value ).ToList( );
@@ -53,6 +67,15 @@ namespace UncleWilfred
             score.TakeUntilDestroy(this).Subscribe(x => {
                 scoreText.text = x.ToString();
             });
+
+            CalculateTotalScore();
+            
+        }
+
+        void CalculateTotalScore()
+        {
+            int score = (questions.Count * 5) + ((questions.Count-2) * 3) + 30;
+            UsefulWords.Instance.UpdateTotalScore(score);
         }
 
         void RenderQuestion()
@@ -63,6 +86,9 @@ namespace UncleWilfred
 
         void ViewQuestions(int startCount)
         {
+            isPlay = true;
+            timerCountdown = 0;
+            clockImage.fillAmount = 1;
             correctedAnswered = 0;
 
             questionParent.SetActive(true);
@@ -78,9 +104,11 @@ namespace UncleWilfred
                         correctedAnswered +=1;
                         CheckFinish();
                         UsefulWords.Instance.AddScore(5);
+                        // currentScore +=5;
                         if(isCombo)
                         {
                             UsefulWords.Instance.AddScore(3, true);
+                            // currentScore +=5;
                         }
                         isCombo = true;
                     }

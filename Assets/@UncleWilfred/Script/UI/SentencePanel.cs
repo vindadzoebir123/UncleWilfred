@@ -16,6 +16,9 @@ namespace UncleWilfred
 
         public LevelDragText[] textDrag;
 
+        // public Image clockImage;
+        // public Color[] clockColor;
+
         List<SentenceData> listSentence = new List<SentenceData>();
         int index;
 
@@ -53,6 +56,13 @@ namespace UncleWilfred
                 scoreText.text = x.ToString();
             });
             ShowQuiz();
+            CalculateTotalScore();
+        }
+
+        void CalculateTotalScore()
+        {
+            int score = listSentence.Count * 10 + ((listSentence.Count-1) * 5);
+            UsefulWords.Instance.UpdateTotalScore(score);
         }
 
         void ShowQuiz()
@@ -99,16 +109,16 @@ namespace UncleWilfred
             
             else
             {
-                 if(timerCountDown<=3f)
-                {
-                    // AudioManager.Instance.Play(brilliant);
-                    UsefulWords.Instance.AddScore(30, true);
-                }
-                else if(timerCountDown<=5f)
-                {
-                    // AudioManager.Instance.Play(amazing);
-                    UsefulWords.Instance.AddScore(10, true);
-                }
+                //  if(timerCountDown<=3f)
+                // {
+                //     // AudioManager.Instance.Play(brilliant);
+                //     UsefulWords.Instance.AddScore(30, true);
+                // }
+                // else if(timerCountDown<=5f)
+                // {
+                //     // AudioManager.Instance.Play(amazing);
+                //     UsefulWords.Instance.AddScore(10, true);
+                // }
                 // else
                 // {
                 //     AudioManager.Instance.Play(welldone);
