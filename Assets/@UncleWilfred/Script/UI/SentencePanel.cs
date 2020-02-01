@@ -25,11 +25,13 @@ namespace UncleWilfred
         Subject<Unit> onCompleteSentence;
 
         bool isCombo;
-        float timerCountDown;
+        // float timerCountdown;
         public IObservable<Unit> OnCompleteSentenceAsObservable()
         {
             return onCompleteSentence ?? (onCompleteSentence = new Subject<Unit>());
         }
+
+        bool isPlay;
 
         // void Start()
         // {
@@ -39,13 +41,22 @@ namespace UncleWilfred
         {
             // SentenceScriptable item = Resources.Load<SentenceScriptable>("Sentence_Arabic");
             isCombo = false;
+            isPlay = false;
 
-            timerCountDown = 0f;
+            // timerCountdown = 0f;
 
-            Observable.Interval(TimeSpan.FromMilliseconds(100)).TakeUntilDestroy(this).Subscribe(x =>
-            {
-                timerCountDown+=0.1f;
-            });
+            // Observable.Interval(TimeSpan.FromSeconds(0.2f)).TakeUntilDisable(this).Subscribe(x =>
+            // {
+            //     if(isPlay)
+            //     {
+            //         timerCountdown+=0.1f;
+            //         clockImage.fillAmount = 1 - (timerCountdown/5f);
+            //         if(timerCountdown<3f)
+            //             clockImage.color = clockColor[0];
+            //         else
+            //             clockImage.color = clockColor[1];
+            //     }
+            // });
 
             listSentence.Clear();
             listSentence = data; //.OrderBy(x => UnityEngine.Random.value).ToList();
@@ -62,11 +73,13 @@ namespace UncleWilfred
         void CalculateTotalScore()
         {
             int score = listSentence.Count * 10 + ((listSentence.Count-1) * 5);
-            UsefulWords.Instance.UpdateTotalScore(score);
+            UsefulWords.Instance.UpdateTotalScoreRound2(score);
         }
 
         void ShowQuiz()
         {
+            // timerCountdown = 0;
+            isPlay = true;
             sentenceText.text = string.Format(listSentence[index].sentence, "_______");
             List<string> temp = listSentence[index].answers.OrderBy(x => UnityEngine.Random.value).ToList();
             for(int i=0;i<3;i++)
@@ -84,11 +97,21 @@ namespace UncleWilfred
                         AudioManager.Instance.Play(listSentence[index].audio);
                         float timer = listSentence[index].audio.length + 0.5f;
                         StartCoroutine(ShowNextQuiz(timer));
-                        UsefulWords.Instance.AddScore(10);
+                        UsefulWords.Instance.AddScoreRound2(10);
                         if(isCombo)
-                            UsefulWords.Instance.AddScore(5, true);
+                            UsefulWords.Instance.AddScoreRound2(5, true);
                         
                         isCombo = true;
+
+                        // if(timerCountdown<=3f)
+                        // {
+                        //     UsefulWords.Instance.AddScoreRound2(5, true);
+                        // }
+                        // else if(timerCountdown<=5f)
+                        // {
+                        //     UsefulWords.Instance.AddScoreRound2(3, true);
+                        // }
+                        isPlay = false;
                     }
                     else
                     {

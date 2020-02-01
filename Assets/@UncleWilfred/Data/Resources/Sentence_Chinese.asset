@@ -15,37 +15,37 @@ MonoBehaviour:
   listSentence:
   - sentence: Do you prefer {0} or coffee?
     answers:
-    - Tea
-    - 'Hot '
-    - Like
+    - tea
+    - 'hot '
+    - like
     audio: {fileID: 8300000, guid: b51502eb473ab594ea5c4b3db6335d34, type: 3}
   - sentence: I do not {0} alcohol.
     answers:
-    - Drink
-    - Fall
-    - Tea
+    - drink
+    - fall
+    - tea
     audio: {fileID: 8300000, guid: d184c52143f36d4469c1e38384a17435, type: 3}
   - sentence: Do you {0} Michael Jackson?
     answers:
-    - Like
-    - And
-    - Water
+    - like
+    - and
+    - water
     audio: {fileID: 8300000, guid: b16629e221769344b85c5261bd4e7b65, type: 3}
   - sentence: We go to the beach in {0}.
     answers:
-    - Summer
-    - Water
-    - Cold
+    - summer
+    - water
+    - cold
     audio: {fileID: 8300000, guid: 212f7b329901ac04cb89c1ecb4000866, type: 3}
   - sentence: '{0} is coming.'
     answers:
-    - Winter
-    - Or
-    - Hot
+    - winter
+    - or
+    - hot
     audio: {fileID: 8300000, guid: 876124f11de59844ab8248bdd26dcabb, type: 3}
   - sentence: Is there {0} on Mars?
     answers:
-    - Water
-    - Drink
-    - Tea
+    - water
+    - drink
+    - tea
     audio: {fileID: 8300000, guid: 3eb2023d4164cec40ad988f3b681eb11, type: 3}

@@ -15,37 +15,37 @@ MonoBehaviour:
   listSentence:
   - sentence: 'What {0} flowers! '
     answers:
-    - Beautiful
-    - Powerful
-    - 'Important '
+    - beautiful
+    - powerful
+    - 'important '
     audio: {fileID: 8300000, guid: de8c856d01e67da4584c26bdfdd78b28, type: 3}
   - sentence: You pay for {0}.
     answers:
-    - Quality
-    - Advantage
-    - Difference
+    - quality
+    - advantage
+    - difference
     audio: {fileID: 8300000, guid: 76c8caed44be72a4ba99fc3e11102027, type: 3}
   - sentence: It is of no {0}.
     answers:
-    - Importance
-    - Personality
-    - Identity
+    - importance
+    - personality
+    - identity
     audio: {fileID: 8300000, guid: 7e5546a61156e9a4c9ae6e5e963622fe, type: 3}
   - sentence: 'Goodbye and good {0}! '
     answers:
-    - Luck
-    - Expression
-    - Force
+    - luck
+    - expression
+    - force
     audio: {fileID: 8300000, guid: 5e2f507c2e1d76c46bcece9d5754f7b2, type: 3}
   - sentence: Do you have an {0} card?
     answers:
-    - Identity
-    - Quality
-    - Power
+    - identity
+    - quality
+    - power
     audio: {fileID: 8300000, guid: f2302828fb1212e489d03b697d1784aa, type: 3}
   - sentence: The {0}'s out.
     answers:
-    - Power
-    - Difference
-    - Look
+    - power
+    - difference
+    - look
     audio: {fileID: 8300000, guid: a1c1160b606335c42bd2a1c670670525, type: 3}

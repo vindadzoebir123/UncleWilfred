@@ -43,7 +43,7 @@ namespace UncleWilfred
             timerCountdown = 0f;
             isCombo = false;
 
-            Observable.Interval(TimeSpan.FromSeconds(0.2f)).TakeUntilDestroy(this).Subscribe(x =>
+            Observable.Interval(TimeSpan.FromSeconds(0.2f)).TakeUntilDisable(this).Subscribe(x =>
             {
                 if(isPlay)
                 {
@@ -74,8 +74,8 @@ namespace UncleWilfred
 
         void CalculateTotalScore()
         {
-            int score = (questions.Count * 5) + ((questions.Count-2) * 3) + 30;
-            UsefulWords.Instance.UpdateTotalScore(score);
+            int score = (questions.Count * 8) + ((questions.Count-1) * 3);
+            UsefulWords.Instance.UpdateTotalScoreRound1(score);
         }
 
         void RenderQuestion()
@@ -103,14 +103,31 @@ namespace UncleWilfred
                         
                         correctedAnswered +=1;
                         CheckFinish();
-                        UsefulWords.Instance.AddScore(5);
+                        UsefulWords.Instance.AddScoreRound1(5);
                         // currentScore +=5;
                         if(isCombo)
                         {
-                            UsefulWords.Instance.AddScore(3, true);
+                            UsefulWords.Instance.AddScoreRound1(3, true);
                             // currentScore +=5;
                         }
                         isCombo = true;
+
+                        if(timerCountdown<=3f)
+                        {
+                            AudioManager.Instance.Play(brilliant);
+                            UsefulWords.Instance.AddScoreRound1(3, true);
+                        }
+                        else if(timerCountdown<=5f)
+                        {
+                            AudioManager.Instance.Play(amazing);
+                            UsefulWords.Instance.AddScoreRound1(2, true);
+                        }
+                        else
+                        {
+                            AudioManager.Instance.Play(welldone);
+                        }
+
+                        timerCountdown = 0;
                     }
                     else
                         isCombo = false;
@@ -133,20 +150,20 @@ namespace UncleWilfred
 
         IEnumerator ShowNextPhase()
         {
-            if(timerCountdown<=3f)
-            {
-                AudioManager.Instance.Play(brilliant);
-                UsefulWords.Instance.AddScore(15, true);
-            }
-            else if(timerCountdown<=5f)
-            {
-                AudioManager.Instance.Play(amazing);
-                UsefulWords.Instance.AddScore(5, true);
-            }
-            else
-            {
-                AudioManager.Instance.Play(welldone);
-            }
+            // if(timerCountdown<=3f)
+            // {
+            //     AudioManager.Instance.Play(brilliant);
+            //     UsefulWords.Instance.AddScoreRound1(15, true);
+            // }
+            // else if(timerCountdown<=5f)
+            // {
+            //     AudioManager.Instance.Play(amazing);
+            //     UsefulWords.Instance.AddScoreRound1(5, true);
+            // }
+            // else
+            // {
+            //     AudioManager.Instance.Play(welldone);
+            // }
 
             yield return new WaitForSeconds(0.5f);
 

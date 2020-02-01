@@ -13,12 +13,6 @@ MonoBehaviour:
   m_Name: WordData_Arabic
   m_EditorClassIdentifier: 
   questions:
-  - sprite: {fileID: 21300000, guid: de2b9ab05d54c474da9a69c6cc21e390, type: 3}
-    text: beef
-    audio: {fileID: 8300000, guid: cedfa36374618534bb6af6bdffe194f1, type: 3}
-  - sprite: {fileID: 21300000, guid: 7292d3bff59807749b89f9270192773d, type: 3}
-    text: beer
-    audio: {fileID: 8300000, guid: 158ba28b82077794d9aa5b592a670071, type: 3}
   - sprite: {fileID: 21300000, guid: 6a632e96a4f88324ea1a9c51573c7857, type: 3}
     text: breakfast
     audio: {fileID: 8300000, guid: 922f6e9e15742974ea45a97e5dd9190a, type: 3}
@@ -46,24 +40,12 @@ MonoBehaviour:
   - sprite: {fileID: 21300000, guid: 329e1bccded7d7f41a63ab6c851b909b, type: 3}
     text: meat
     audio: {fileID: 8300000, guid: 2ee279b4b7feabd4db2a0c5240a15008, type: 3}
-  - sprite: {fileID: 21300000, guid: 71973868e6d1ba641899f8cd9f5876f6, type: 3}
-    text: plate
-    audio: {fileID: 8300000, guid: dc7799a58baa2ff4a8380acef4247b26, type: 3}
-  - sprite: {fileID: 21300000, guid: 581f546c9c55ec44ebf6c88a7c18dae1, type: 3}
-    text: pork
-    audio: {fileID: 8300000, guid: f68b4f9df0b535b40b39006c9852240d, type: 3}
   - sprite: {fileID: 21300000, guid: fa979974e025fdf4db3c117b459ee36a, type: 3}
     text: salt
     audio: {fileID: 8300000, guid: 741f3e4c5bc9fc449b7b04dbe7571249, type: 3}
   - sprite: {fileID: 21300000, guid: 2c1c5a407befa71448a6e4a9c5745f94, type: 3}
     text: strawberry
     audio: {fileID: 8300000, guid: 87377d7bb08f56c4c9db8d2293cb6a41, type: 3}
-  - sprite: {fileID: 21300000, guid: fe0796a3907bebd419abb68f36558345, type: 3}
-    text: sugar
-    audio: {fileID: 8300000, guid: d9504c6e1026fdd4e858fd493bd13d6a, type: 3}
   - sprite: {fileID: 21300000, guid: c3fb0057b6b714741b25aef5516414b3, type: 3}
     text: vegetarian
     audio: {fileID: 8300000, guid: cd2b55317187bb84993121bbceb7c966, type: 3}
-  - sprite: {fileID: 21300000, guid: 72da90511f982044bb3bb97670f1ce4f, type: 3}
-    text: wine
-    audio: {fileID: 8300000, guid: de093cd90f141cd478ea8e1590eac51d, type: 3}

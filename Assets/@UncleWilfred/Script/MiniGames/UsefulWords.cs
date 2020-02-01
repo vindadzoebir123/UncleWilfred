@@ -16,10 +16,10 @@ namespace UncleWilfred
 
         public AnimatedScore animatedObj;
         Queue queueScore = new Queue();
-        public IntReactiveProperty CurrentScore = new IntReactiveProperty(0);
-        public IntReactiveProperty CurrentTotalScore = new IntReactiveProperty(0);
-        public int MaxEligibleScore = 0;
-        public int TotalScore = 0;
+        public IntReactiveProperty Round1Score = new IntReactiveProperty(0);
+        public IntReactiveProperty Round2Score = new IntReactiveProperty(0);
+        public int Round1TotalScore = 0;
+        public int Round2TotalScore = 0;
 
         public MemorizePanel memorizePanel;
         public MatchingPanel1 matchingPanel;
@@ -88,17 +88,17 @@ namespace UncleWilfred
             memorizePanel.OnCompleteMemorizeAsObservable().TakeUntilDisable(memorizePanel.gameObject).Subscribe(x => {
                 memorizePanel.gameObject.SetActive(false);
                 matchingPanel.gameObject.SetActive(true);
-                matchingPanel.Init(phase1, CurrentScore);
+                matchingPanel.Init(phase1, Round1Score);
                 // matchingPanel.OnFinishPhase = InitPhase2;
                 // matchingPanel.OnFinishPhase = InitSentencePhase1;
                 matchingPanel.OnFinishPhase = delegate{
                     // Debug.Log("<color=blue>FINISH MATCHING PANEL</color>");
                     matchingPanel.gameObject.SetActive(false);
-                    scorePanel.Init(CurrentScore.Value, CurrentTotalScore.Value, false);
-                    scorePanel.nextBtn.OnClickAsObservable().TakeUntilDisable(scorePanel).Subscribe(y => {
-                        scorePanel.Hide();
+                    // scorePanel.Init(CurrentScore.Value, CurrentTotalScore.Value, false);
+                    // scorePanel.nextBtn.OnClickAsObservable().TakeUntilDisable(scorePanel).Subscribe(y => {
+                    //     scorePanel.Hide();
                     InitSentencePhase1();
-                    });
+                    // });
                 };
             });
         }
@@ -111,10 +111,10 @@ namespace UncleWilfred
         //     });
         // }
 
-        public void AddScore(int add, bool animated = false)
+        public void AddScoreRound1(int add, bool animated = false)
         {
-            CurrentScore.Value += add;
-            TotalScore+=add;
+            Round1Score.Value += add;
+            // TotalScore+=add;
 
             if(animated)
             {
@@ -125,11 +125,34 @@ namespace UncleWilfred
             }
         }
 
-        public void UpdateTotalScore(int total)
+        public void AddScoreRound2(int add, bool animated = false)
         {
-            CurrentScore.Value = 0;
-            CurrentTotalScore.Value = total;
-            MaxEligibleScore+=CurrentTotalScore.Value;
+            Round2Score.Value += add;
+            // TotalScore+=add;
+
+            if(animated)
+            {
+                // queueScore.Enqueue()
+                AnimatedScore item = Instantiate(animatedObj);
+                item.transform.SetParent(transform,false);
+                item.Init(add);
+            }
+        }
+
+        public void UpdateTotalScoreRound1(int total)
+        {
+            Round1TotalScore+=total;
+            // CurrentScore.Value = 0;
+            // CurrentTotalScore.Value = total;
+            // MaxEligibleScore+=CurrentTotalScore.Value;
+        }
+
+         public void UpdateTotalScoreRound2(int total)
+        {
+            Round2TotalScore+=total;
+            // CurrentScore.Value = 0;
+            // CurrentTotalScore.Value = total;
+            // MaxEligibleScore+=CurrentTotalScore.Value;
         }
 
         void InitSentencePhase1()
@@ -144,13 +167,13 @@ namespace UncleWilfred
             sentencePanel.gameObject.SetActive(true);
             matchingPanel.gameObject.SetActive(false);
             memorizePanel.gameObject.SetActive(false);
-            sentencePanel.Init(phase1, CurrentScore);
+            sentencePanel.Init(phase1, Round2Score);
 
             sentencePanel.OnCompleteSentenceAsObservable().TakeUntilDisable(sentencePanel.gameObject).Subscribe(x => {
                 sentencePanel.gameObject.SetActive(false);
-                scorePanel.Init(CurrentScore.Value, CurrentTotalScore.Value, false);
-                    scorePanel.nextBtn.OnClickAsObservable().TakeUntilDisable(scorePanel).Subscribe(y => {
-                        scorePanel.Hide();
+                // scorePanel.Init(CurrentScore.Value, CurrentTotalScore.Value, false);
+                //     scorePanel.nextBtn.OnClickAsObservable().TakeUntilDisable(scorePanel).Subscribe(y => {
+                //         scorePanel.Hide();
                     InitPhase2();
                     
                 // InitPhase2();
@@ -158,7 +181,7 @@ namespace UncleWilfred
                 // matchingPanel.gameObject.SetActive(true);
                 // matchingPanel.Init(phase1);
                 // matchingPanel.OnFinishPhase = InitPhase2;
-                    });
+                    // });
             });
         }
 
@@ -174,7 +197,7 @@ namespace UncleWilfred
             sentencePanel.gameObject.SetActive(true);
             matchingPanel.gameObject.SetActive(false);
             memorizePanel.gameObject.SetActive(false);
-            sentencePanel.Init(phase1, CurrentScore);
+            sentencePanel.Init(phase1, Round2Score);
 
             sentencePanel.OnCompleteSentenceAsObservable().TakeUntilDisable(sentencePanel.gameObject).Subscribe(x => {
                 CompleteLevel();
@@ -202,13 +225,13 @@ namespace UncleWilfred
             memorizePanel.OnCompleteMemorizeAsObservable().TakeUntilDisable(memorizePanel.gameObject).Subscribe(x => {
                 memorizePanel.gameObject.SetActive(false);
                 matchingPanel.gameObject.SetActive(true);
-                matchingPanel.Init(phase2, CurrentScore);
+                matchingPanel.Init(phase2, Round1Score);
                 matchingPanel.OnFinishPhase = delegate{
                     matchingPanel.gameObject.SetActive(false);
-                    scorePanel.Init(CurrentScore.Value, CurrentTotalScore.Value, false);
-                    scorePanel.nextBtn.OnClickAsObservable().TakeUntilDisable(scorePanel).Subscribe(y => {
-                        scorePanel.Hide();
-                    InitSentencePhase2();});
+                    // scorePanel.Init(CurrentScore.Value, CurrentTotalScore.Value, false);
+                    // scorePanel.nextBtn.OnClickAsObservable().TakeUntilDisable(scorePanel).Subscribe(y => {
+                    //     scorePanel.Hide();
+                    InitSentencePhase2(); //});
                 };
             });
         }
@@ -218,7 +241,7 @@ namespace UncleWilfred
             matchingPanel.gameObject.SetActive(false);
             sentencePanel.gameObject.SetActive(false);
             scorePanel.gameObject.SetActive(true);
-            scorePanel.Init(TotalScore, MaxEligibleScore,true);
+            scorePanel.Init(Round1Score.Value, Round1TotalScore, Round2Score.Value, Round2TotalScore);
             Debug.Log("Showing score panel");
             // sentencePanel.Init();
         }
