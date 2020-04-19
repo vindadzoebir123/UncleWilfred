@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Sentence
   - Image
+  - base
   layers:
   - Default
   - TransparentFX

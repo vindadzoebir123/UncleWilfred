@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/@UncleWilfred/Scene/game.unity
     guid: 9a56dc3278145af48815f1afdbf6d622
-  - enabled: 1
+  - enabled: 0
     path: Assets/@UncleWilfred/Scene/usefulwords.unity
     guid: 796f146a5a31d774a980d30bc7e1f3dc
+  - enabled: 1
+    path: Assets/@UncleWilfred/Scene/phonesthemes.unity
+    guid: 0fd5f15e00b179f4399ca5acbc3bb5bf
   m_configObjects: {}
