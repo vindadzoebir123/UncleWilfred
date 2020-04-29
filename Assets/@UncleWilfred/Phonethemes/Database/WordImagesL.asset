@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12144e547f1c6eb4a921e0ce86982ca9, type: 3}
+  m_Name: WordImagesL
+  m_EditorClassIdentifier: 
+  words:
+  - words: lie
+    image: {fileID: 0}
+  - words: loop
+    image: {fileID: 21300000, guid: be053636458928a48806bffef234cf82, type: 3}
+  - words: lease
+    image: {fileID: 0}
+  - words: leave
+    image: {fileID: 0}
+  - words: lend
+    image: {fileID: 21300000, guid: fc882a3a406ab2c4192af4723439da12, type: 3}
+  - words: let
+    image: {fileID: 21300000, guid: f0c63a475c99b25498e6c274669dc45c, type: 3}
+  - words: lob
+    image: {fileID: 0}
+  - words: loose
+    image: {fileID: 21300000, guid: 7de6b620552b9b4459dd86986cbbbb6e, type: 3}
+  - words: lose
+    image: {fileID: 21300000, guid: 8a26efe2c840a094fa922160181a7fc4, type: 3}
+  - words: lurch
+    image: {fileID: 21300000, guid: 398e70aeab0eb47458cd6a9d1c98ac64, type: 3}
+  - words: loan
+    image: {fileID: 21300000, guid: dca12dd37fc1f1a43916b9de7ec98477, type: 3}
+  - words: lapse
+    image: {fileID: 21300000, guid: 2e53a3acdb179c2449b32d2ab002f1a0, type: 3}
+  - words: lay
+    image: {fileID: 0}
+  - words: lean
+    image: {fileID: 21300000, guid: bd29b27409421fe47ad6b66daa446027, type: 3}
+  - words: list
+    image: {fileID: 0}
+  - words: litter
+    image: {fileID: 21300000, guid: 0e6898a6c4ae29b49a4507bf355cc29d, type: 3}
+  - words: lag
+    image: {fileID: 21300000, guid: 323c2ce1b4d006048b7fd7a7875f8c97, type: 3}
+  - words: linger
+    image: {fileID: 21300000, guid: 5ca277090baa61143a7adaba8a36bd86, type: 3}
+  - words: loaf
+    image: {fileID: 21300000, guid: 9577f2c835fb9b746ab81e4d476c5dae, type: 3}
+  - words: loiter
+    image: {fileID: 21300000, guid: 825f6cdd492449f4c87697c444d287ae, type: 3}
+  - words: lollop
+    image: {fileID: 21300000, guid: 7b0d50c48d76f354281382a5487e6c55, type: 3}
+  - words: limp
+    image: {fileID: 21300000, guid: 45e0c1e92f521954a9f612dc5243d1c5, type: 3}
+  - words: loll
+    image: {fileID: 0}
+  - words: lope
+    image: {fileID: 0}
+  - words: lounge
+    image: {fileID: 21300000, guid: c2ed810489e46564a80f88e4e1b530c4, type: 3}
+  - words: leer
+    image: {fileID: 21300000, guid: 6b765f5fc2a5cff49b13138e879f9c09, type: 3}
+  - words: lure
+    image: {fileID: 21300000, guid: 58b3f391d2f80d64d9c804f2b6451c5f, type: 3}
+  - words: lust
+    image: {fileID: 21300000, guid: 9137afec7ea8ca9448bb5a5e4670cb05, type: 3}
+  - words: ladle
+    image: {fileID: 0}
+  - words: leak
+    image: {fileID: 21300000, guid: bdad2344d6728244289db63b1ebbfca7, type: 3}
+  - words: lick
+    image: {fileID: 21300000, guid: c265ea9fb429f944785a832a36715b09, type: 3}
+  - words: lap
+    image: {fileID: 0}
+  - words: lurk
+    image: {fileID: 21300000, guid: 2c324dcdf91a3a448824251d4607024a, type: 3}
+  - words: lam
+    image: {fileID: 0}
+  - words: lance
+    image: {fileID: 0}
+  - words: lash
+    image: {fileID: 0}
+  - words: loft
+    image: {fileID: 0}
+  - words: lull
+    image: {fileID: 21300000, guid: 252de8bbc0f3e0f4c82922f51d34bdfe, type: 3}
+  - words: lunge
+    image: {fileID: 0}
+  - words: lop
+    image: {fileID: 21300000, guid: 80ea9acc59af11b4cb905d746c9c862e, type: 3}
+  - words: laugh
+    image: {fileID: 21300000, guid: ae65b489fe484ea42a13fa2a45a2f1a7, type: 3}
+  - words: launch
+    image: {fileID: 0}
+  - words: low
+    image: {fileID: 21300000, guid: 22963172e1e034e4dbfbe84bb211fd09, type: 3}
+  - words: luff
+    image: {fileID: 0}
+  - words: lug
+    image: {fileID: 0}
+  - words: lumber
+    image: {fileID: 0}

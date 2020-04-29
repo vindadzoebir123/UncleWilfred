@@ -7,17 +7,39 @@ namespace UncleWilfred.Phonethemes
 {
     public class TextF : TextAnim
     {
-        void OnTriggerEnter2D(Collider2D col)
+        Vector3 startPos;
+        Rigidbody2D rigidBody;
+        [SerializeField]
+        private float speed = 1f;
+        void Start()
         {
-            if(col.tag == "base")
-            {
-                rb.velocity = new Vector2(Random.Range(-5,5), Random.Range(3f,5f));
-            }
+            startPos = transform.position;
+            rigidBody = GetComponent<Rigidbody2D>();
         }
 
-        void OnBecameInvisible() 
+        void OnTriggerEnter2D(Collider2D col)
         {
-            Destroy(gameObject);
+            ResetPosition();
+            // if(col.tag == "base")
+            // {
+            //     rb.velocity = new Vector2(Random.Range(-5,5), Random.Range(3f,5f));
+            // }
+        }
+
+        void Update()
+        {   
+            rigidBody.velocity = new Vector2(0,speed);
+        }
+
+        // void OnBecameInvisible() 
+        // {
+        //     // Destroy(gameObject);
+        //     ResetPosition();
+        // }
+
+        void ResetPosition()
+        {
+            transform.position = startPos;
         }
     }
 }

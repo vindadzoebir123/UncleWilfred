@@ -10,6 +10,13 @@ namespace UncleWilfred.Phonethemes
     {
         Tween tween;
         TextMeshPro tmp;
+
+        Vector3 startPos;
+        void Start()
+        {
+            startPos = transform.position;
+        }
+        
         public override void Init(string text)
         {
             base.Init(text);
@@ -23,14 +30,26 @@ namespace UncleWilfred.Phonethemes
         {
             if(col.tag == "base")
             {
-                rb.isKinematic = true;
-                tween.Kill();
+                ResetPosition();
+                // rb.isKinematic = true;
+                // tween.Kill();
 
-                tmp.DOFade(1, 0.5f);
-                tmp.transform.DOScale(new Vector3(0.2f,0.2f,0.2f), 1f).OnComplete(delegate{
-                    Destroy(gameObject);
-                });
+                // tmp.DOFade(1, 0.5f);
+                // // tmp.transform.DOScale(new Vector3(0.2f,0.2f,0.2f), 1f).OnComplete(delegate{
+                // //     ResetPosition();
+                //     // Destroy(gameObject);
+                // });
             }
+        }
+
+        void OnDestroy()
+        {
+            tween.Kill();
+        }
+
+        void ResetPosition()
+        {
+            transform.position = startPos;
         }
     }
 }

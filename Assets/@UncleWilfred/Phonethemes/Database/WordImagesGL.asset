@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12144e547f1c6eb4a921e0ce86982ca9, type: 3}
+  m_Name: WordImagesGL
+  m_EditorClassIdentifier: 
+  words:
+  - words: glisten
+    image: {fileID: 21300000, guid: 0206d3a6abb04e54a908d34919c886bf, type: 3}
+  - words: glare
+    image: {fileID: 21300000, guid: 5a93c705b7f1e924991f1e654286aca8, type: 3}
+  - words: glass
+    image: {fileID: 21300000, guid: 46c6811ab1c613946b5d1553880d2246, type: 3}
+  - words: glaze
+    image: {fileID: 0}
+  - words: gleam
+    image: {fileID: 21300000, guid: 561be905f930a3e429b680e740db1c22, type: 3}
+  - words: glimmer
+    image: {fileID: 0}
+  - words: glimpse
+    image: {fileID: 21300000, guid: 5b1f327189646c440b56adb74639bfdd, type: 3}
+  - words: glint
+    image: {fileID: 21300000, guid: 136e9d908de8dfa46b63d80d4ffd94c4, type: 3}
+  - words: glister
+    image: {fileID: 21300000, guid: 0206d3a6abb04e54a908d34919c886bf, type: 3}
+  - words: glitter
+    image: {fileID: 0}
+  - words: gloat
+    image: {fileID: 21300000, guid: 430db4a6e7da8b4449c73c3052ca9c00, type: 3}
+  - words: glow
+    image: {fileID: 21300000, guid: 3e8fc2282c5c13b4183c12e2594c7a3a, type: 3}
+  - words: glower
+    image: {fileID: 0}
+  - words: glance
+    image: {fileID: 21300000, guid: cec8dec026b016741b061bb08a13603f, type: 3}
+  - words: gloss
+    image: {fileID: 0}

@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UniRx;
+using DG.Tweening;
 
 namespace UncleWilfred.Phonethemes
 {
     public class DoorPanel : MonoBehaviour
     {
         [SerializeField]
-        private Button door1, door2, door3, nextBtn;
+        private Button door1, door2, door3, nextBtn, leftArrow, rightArrow;
+        [SerializeField]
+        RectTransform horizontalParent;
         [SerializeField]
         private Animator doorAnim;
         [SerializeField]
@@ -20,11 +23,18 @@ namespace UncleWilfred.Phonethemes
         private GameObject currentSelectedWorld;
 
         private int countPeeking;
+        private float moveSize;
+        private int currentDoorActive;
 
         void Start()
         {
             Init();
             countPeeking = 0;
+            currentDoorActive = 2;
+            moveSize = 1200f;
+            horizontalParent.anchoredPosition = new Vector3(0,0,0);
+
+            RenderArrow();
         }
 
         void Init()
@@ -45,9 +55,28 @@ namespace UncleWilfred.Phonethemes
                 ShowPhase2();
             });
 
+            leftArrow.OnClickAsObservable().TakeUntilDestroy(this).Subscribe(x => {
+                currentDoorActive -=1;
+                horizontalParent.DOAnchorPosX(horizontalParent.anchoredPosition.x +moveSize, 0.2f);
+                // horizontalParent.anchoredPosition = new Vector2(horizontalParent.anchoredPosition.x + moveSize, 0);
+                RenderArrow();
+            });
+            rightArrow.OnClickAsObservable().TakeUntilDestroy(this).Subscribe(x => {
+                currentDoorActive+=1;
+                horizontalParent.DOAnchorPosX(horizontalParent.anchoredPosition.x -moveSize, 0.2f);
+                // horizontalParent.anchoredPosition = new Vector2(horizontalParent.anchoredPosition.x - moveSize, 0);
+                RenderArrow();
+            });
+
             nextBtn.gameObject.SetActive(false);
 
             ResetView();
+        }
+
+        void RenderArrow()
+        {
+            leftArrow.gameObject.SetActive(currentDoorActive>1);
+            rightArrow.gameObject.SetActive(currentDoorActive<3);
         }
 
         void ResetView()

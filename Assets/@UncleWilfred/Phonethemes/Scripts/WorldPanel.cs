@@ -17,7 +17,7 @@ namespace UncleWilfred.Phonethemes
         [SerializeField]
         private TextAnim textObj;
         [SerializeField]
-        private Transform textParent;
+        private Transform textParent, spawnPoint;
         [SerializeField]
         private float delayWords = 0.2f;
 
@@ -26,7 +26,7 @@ namespace UncleWilfred.Phonethemes
 
         public void Init()
         {
-            backBtn.gameObject.SetActive(false);
+            // backBtn.gameObject.SetActive(false);
             backBtn.OnClickAsObservable().TakeUntilDisable(this).Subscribe(X => {
                 Hide();
 
@@ -64,14 +64,14 @@ namespace UncleWilfred.Phonethemes
             {
                 TextAnim item = Instantiate(textObj);
                 item.transform.SetParent(textParent);
-                item.transform.position = new Vector2(Random.Range(-screenWorldPoint.x, screenWorldPoint.x), screenWorldPoint.y);
+                item.transform.position = new Vector2(Random.Range(-screenWorldPoint.x, screenWorldPoint.x), spawnPoint.position.y);
                 item.Init(words[0]);
                 words.RemoveAt(0);
 
                 yield return new WaitForSeconds(delayWords);
             }
 
-            backBtn.gameObject.SetActive(true);
+            // backBtn.gameObject.SetActive(true);
         }
 
         void ClearWordsParent()

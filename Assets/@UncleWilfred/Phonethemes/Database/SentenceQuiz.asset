@@ -18,71 +18,71 @@ MonoBehaviour:
     - lick
     - flex
     - glisten
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: ed762d0a559feb043a70daa9e8e24e41, type: 3}
   - sentence: 'I {0} back into bed. '
     answers:
     - flumped
     - gleamed
     - lend
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 973618eff4eeb9a41b78fc1fd6ac77fb, type: 3}
   - sentence: He {0} his arms to show off his muscles.
     answers:
     - flexed
     - glowed
     - licked
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: e01fd827eb588fe4d9273243604eb47f, type: 3}
   - sentence: A shiny stone {0} as the light changes.
     answers:
     - glints
     - flays
     - lusts
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 78f7cd2a54253294dbf21046eb62579a, type: 3}
   - sentence: "A nonromantic {0} lasts only 1.18 seconds and a flirtatious gaze lasts
       2\u20133 seconds."
     answers:
     - glance
     - flail
     - leave
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 67c3444b6406c7d4fa367bc528282918, type: 3}
   - sentence: Beckham {0} off the field with a foot injury.
     answers:
     - limped
     - flicked
     - 'glimpsed '
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 55d74652af514954bbddbd577b9b713e, type: 3}
   - sentence: Do not {0} your valuables in crowded places.
     answers:
     - flaunt
     - glance
     - lean
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 1705e023f455210409b8d150c6ed6fa2, type: 3}
   - sentence: It takes Ninety-six hours to completely recover from jet {0}.
     answers:
     - lag
     - flump
     - glimpse
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: e0691edffa90f424e9eb64b64f150a5a, type: 3}
   - sentence: Sixty perfect teeth {0} between his parted lips
     answers:
     - gleamed
     - flapped
     - 'loped '
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 05ecf1a3d5669d7438b1dfebdcbf172b, type: 3}
   - sentence: The dog came {0} down the path.
     answers:
     - lolloping
     - flogging
     - glazing
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 45a787fd3e0b8fc438e0a08885edb256, type: 3}
   - sentence: We {0} around and watched a game on TV.
     answers:
     - lounged
     - flew
     - glared
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 753b05ee6006d104c9429e977d6a4cb0, type: 3}
   - sentence: Dragonflies {0} their wings in a figure-of-eight motion.
     answers:
     - flap
     - glance
     - lop
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: ec981f0a6c3a7854bb371de26f6ab5bc, type: 3}

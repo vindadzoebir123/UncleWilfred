@@ -12,18 +12,20 @@ namespace UncleWilfred.Phonethemes
     {
         [SerializeField]
         private SentenceScriptable sentenceData;
-        [SerializeField]
-        private Sprite[] spritesImages;
+        // [SerializeField]
+        // private Sprite[] spritesImages;
         [SerializeField]
         private TextMeshProUGUI txtQuestion;
         [SerializeField]
         private LevelDragText[] txtAnswers;
         [SerializeField]
         private Image spriteImage, bubbles;
-        [SerializeField]
-        private Transform imageTransform;
+        // [SerializeField]
+        // private Transform imageTransform;
         [SerializeField]
         Color[] colors;
+        [SerializeField]
+        AudioSource audioPlay;
 
         private SentenceData[] sentences;
         private int currentIndex;
@@ -48,7 +50,7 @@ namespace UncleWilfred.Phonethemes
         private void ShowQuestion()
         {
             bubbles.color = Color.white;
-            imageTransform.localScale = Vector3.zero;
+            // imageTransform.localScale = Vector3.zero;
             txtQuestion.text = string.Format(sentences[currentIndex].sentence, "_______");
 
             List<string> temp = sentences[currentIndex].answers.OrderBy(x => UnityEngine.Random.value).ToList();
@@ -87,13 +89,15 @@ namespace UncleWilfred.Phonethemes
                 newColor = colors[2];
 
             bubbles.DOColor(newColor, 0.5f);
+            float timing = sentences[currentIndex].audio.length;
+            audioPlay.PlayOneShot(sentences[currentIndex].audio);
             
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.5f + timing);
 
-            spriteImage.sprite = spritesImages[currentIndex];
-            Debug.Log("Sprite images : " + spritesImages[currentIndex]);
-            imageTransform.DOScale(Vector3.one, 0.3f);
-            yield return new WaitForSeconds(1.5f);
+            // spriteImage.sprite = spritesImages[currentIndex];
+            // Debug.Log("Sprite images : " + spritesImages[currentIndex]);
+            // imageTransform.DOScale(Vector3.one, 0.3f);
+            // yield return new WaitForSeconds(1.5f);
             currentIndex++;
 
             if(currentIndex<sentences.Length)
