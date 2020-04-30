@@ -11,15 +11,16 @@ namespace UncleWilfred.Phonethemes
         Tween tween;
         TextMeshPro tmp;
 
+
         Vector3 startPos;
         void Start()
         {
             startPos = transform.position;
         }
         
-        public override void Init(string text)
+        public override void Init(WordImagesPair pair)
         {
-            base.Init(text);
+            base.Init(pair);
             rb.velocity = new Vector2(0, -1f);
 
             tmp = GetComponent<TextMeshPro>();

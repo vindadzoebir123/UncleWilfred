@@ -12,7 +12,7 @@ namespace UncleWilfred.Phonethemes
         private Button backBtn;
 
         [SerializeField]
-        private WordsScriptable database;
+        private SOWordImages database;
 
         [SerializeField]
         private TextAnim textObj;
@@ -21,7 +21,7 @@ namespace UncleWilfred.Phonethemes
         [SerializeField]
         private float delayWords = 0.2f;
 
-        private List<string> words = new List<string>();
+        private List<WordImagesPair> words = new List<WordImagesPair>();
         private Vector2 screenWorldPoint;
 
         public void Init()

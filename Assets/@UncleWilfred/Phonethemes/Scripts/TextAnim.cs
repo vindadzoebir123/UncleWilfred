@@ -9,15 +9,23 @@ namespace UncleWilfred.Phonethemes
     public class TextAnim : MonoBehaviour
     {
         protected Rigidbody2D rb;
+        public Sprite image;
 
         void Awake()
         {
             rb = GetComponent<Rigidbody2D>();
         }
 
-        public virtual void Init(string text)
+        public virtual void Init(WordImagesPair pair)
         {
-            GetComponent<TextMeshPro>().text = text;
+            image = pair.image;
+            GetComponent<TextMeshPro>().text = pair.words;
+        }
+
+        void OnMouseDown()
+        {
+            // Debug.Log("Click word " + image.name);
+            ImagePanelShowing.Instance.Show(image);
         }
     }
 }

@@ -22,7 +22,7 @@ namespace UncleWilfred.Phonethemes
             rigidbody = GetComponent<Rigidbody2D>();
         }
 
-        public override void Init(string text)
+        public override void Init(WordImagesPair pair)
         {
             // float velX = Random.Range(-1f,1f);
             // rb.velocity = new Vector2(velX, -1f);
@@ -30,7 +30,7 @@ namespace UncleWilfred.Phonethemes
             float distance = Random.Range( 1f,2f);
             tween = transform.DOLocalMoveX(transform.position.x + distance, 1f).SetEase(Ease.InOutSine).SetLoops(-1, LoopType.Yoyo);
             
-            base.Init(text);
+            base.Init(pair);
         }
 
         void Update()
